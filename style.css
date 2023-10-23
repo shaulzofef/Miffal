@@ -1,0 +1,150 @@
+@font-face  {
+	font-family: "Mandatory";
+	src: url("assets/fonts/Mandatory-18.otf") format("opentype");
+}
+@font-face  {
+	font-family: "MiraimLibre";
+	src: url("assets/fonts/MiriamLibre-Bold.ttf") format("opentype");
+}
+* {
+	text-align: center;
+	font-family: 'MiraimLibre';
+	padding: 0;
+	margin: 0;
+	font-size: 1.1rem;
+}
+
+h1 {
+	font-size: 1.3rem;
+	font-weight: normal;
+	margin: 2rem 0;
+}
+.time {
+	font-size: .9rem;
+	width: 70px;
+	margin-top: 3px;
+}
+.time span {
+	font-size: .3rem;
+	vertical-align: top;
+}
+.pill {
+	display: inline-block;
+	border-radius: 15px;
+	padding: 2px 9px 0;
+}
+
+
+/*-- Colors --*/
+* {
+	color: #fffde8;	
+}
+body {
+	background-color: #2f3439;	
+}
+.fa-clock, h1 {
+	color: #f7a458;
+}
+.day-container {
+	color: #2f3439;
+}
+.orange {
+	background: #f7a458 50%;	
+	color: #2f3439;	
+}
+.blue {
+	background: #6ad5ec;
+	color: #2f3439;	
+}
+.green {
+	background: #6aec92;
+	color: #2f3439 ;
+}
+.full {
+	background: #6ad5ec;
+	opacity: 20%;	
+	color: #2f3439;	
+}
+.slots, .day-container {
+	background: #353a41 50%;
+}
+.slot {
+	background: #3f454c 50%;
+}
+
+
+
+/*-- Alignment --*/
+header, main {
+	margin: 50px auto;
+	width: 375px;
+}
+header, section {
+	margin: 20px auto;
+}
+.day, .slots, .slot, .activity, .activities, .name, .day-container {
+	display: flex;	
+	gap: 12px	 
+}
+ .day-container, .slot, .activity, .name {
+	flex-direction: row-reverse;	
+}
+.day, .activity, .day-container {
+	align-items: center;
+}
+.day {
+	justify-content: center;
+ }
+.day, .slots, .activities {
+	 flex-direction: column;
+}
+.slots {
+	padding: 10px;
+	border-radius: 15px;
+}
+.slot {
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 15px;
+}
+.activities {
+	align-items: flex-end;
+	justify-content: flex-start;
+	flex: 0 1 300px;
+}
+.activity {
+	justify-content: space-between;
+	width: 100%;
+}
+.name {
+	justify-content: flex-start;
+}
+.day-container {
+	padding-right: 0;
+}
+.fa-rocket {
+	margin-top: 3px;
+}
+
+
+/*-- Progress --*/
+.progress {
+	width: 50px;
+}
+.progress25 {
+	background:  linear-gradient(to right, #6ad5ec 25%, #55a7b9 0);	
+}
+.progress50 {
+	background:  linear-gradient(to right, #6ad5ec 50%, #55a7b9 0);	
+}
+.progress75 {
+	background:  linear-gradient(to right, #6ad5ec 75%, #55a7b9 0);	
+}
+.progress100 {
+	background:  linear-gradient(to right, #6ad5ec 100%, #55a7b9 0);	
+}
+
+
+
+
