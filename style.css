@@ -131,6 +131,7 @@ header, section {
 /*-- Progress --*/
 .progress {
 	width: 50px;
+	color: #2f3439;	
 }
 .progress25 {
 	background:  linear-gradient(to right, #6ad5ec 25%, #55a7b9 0);	
