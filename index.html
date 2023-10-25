@@ -6,21 +6,27 @@
 	<title>Miffal Schedule</title>
 	<link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/2b071953cd.js" crossorigin="anonymous"></script>
+	
 </head>
 <body>
 	<header>
 		<h1>שעות מפעל <i class="fa-solid fa-clock"></i></h1>
-	</header>
-
-	<main>
+		<section class="location">
+			<h2>במפעל <i class="fa-solid fa-house"></i></h2>
+			<h2>בסדנת חוץ <i class="fa-solid fa-rocket"></i></h2>
+		</section>
 		<section>
 			<p class="pill green">יש לי הצעה <i class="fa-solid fa-circle-plus green"></i></p>
 		</section>
 		
+	</header>
+
+	<main>
+		
 		<section class="day">
-			<div class="pill day-container">
-				<div class="pill orange day-label">יום א׳</div>
-				<div class="date">29/10</div>
+			<div class="pill day-label">
+				<div class="pill orange">יום א׳</div>
+				<div>29/10</div>
 			</div>
 			<div class="slots">
 				<div class="slot">
@@ -34,9 +40,36 @@
 								<i class="fa-solid fa-house"></i>
 								<div class="name">פרצה</div>
 							</div>
-							<div>
-								<div class="pill blue">+</div>
+							<div class="signup-position">
+								<div class="signup">פרטים&nbsp;והרשמה <i class="fa-solid fa-share"></i></div>
+								<div class="pill blue" id="toggleButton">+</div>
+								
 								<div class="pill progress progress75">15/20</div>
+							</div>
+						</div>
+						<div class="container">
+							<div class="content-container hidden" id="myDiv">
+								<div class="details">
+									<p>מכונת משחק שמתפקדת בתור אירוע מתמשך. רצפי המשחק יכולים להיות קצרים או ארוכים, עם הדרכה או בלי הדרכה. זה פחות סדנא ויותר משהו כיפי שאפשר להתאסף סביבו. אפשר לשחק עד 8 שחקניות יחד באותו הזמן. בנוסף, נשמח לספר ולהראות לשחקניות חלקים מתהליך היצירה של משחק מחשב קטן וחמוד.</p>
+									
+		
+									<form action="/action_page.php" class="form">
+										<div>
+											<label for="number">כמות משתתפים</label>
+						   					<select name="number" id="number">
+							 					<option>1</option>
+							 					<option>2</option>
+							 					<option>3</option>
+							 					<option>4</option>
+						   					</select>
+										</div>
+										<input type="text" id="name" name="name" value="" placeholder="שם מלא">
+				  						<input type="text" id="lname" name="lname" value="" placeholder="טלפון">
+										<input type="text" id="lname" name="lname" value="" placeholder="מייל">
+		
+								 		<input type="submit" value="הרשמה" class="submit">
+									</form>
+								</div>
 							</div>
 						</div>
 						<div class="activity">
@@ -125,8 +158,8 @@
 		
 		
 		<section class="day">
-			<div class="pill day-container">
-				<div class="pill orange day-label">יום ב׳</div>
+			<div class="pill day-label">
+				<div class="pill orange">יום ב׳</div>
 				<div class="date">30/10</div>
 			</div>
 			<div class="slots">
@@ -204,8 +237,8 @@
 		
 		
 		<section class="day">
-			<div class="pill day-container">
-				<div class="pill orange day-label">יום ג׳</div>
+			<div class="pill day-label">
+				<div class="pill orange">יום ג׳</div>
 				<div class="date">31/10</div>
 			</div>
 			<div class="slots">
@@ -294,5 +327,25 @@
 	<footer>
 		<!--<p>&copy; 2023 Miffal</p>-->
 	</footer>
+	<script>
+		const toggleButton = document.getElementById('toggleButton');
+		const contentContainer = document.getElementById('myDiv');
+		// JavaScript to initially hide the content
+		document.addEventListener("DOMContentLoaded", function () {
+			const contentContainer = document.getElementById("myDiv");
+			contentContainer.style.maxHeight = "0";
+		});
+
+		let isHidden = true;
+	
+		toggleButton.addEventListener('click', () => {
+			if (isHidden) {
+				contentContainer.style.maxHeight = contentContainer.scrollHeight + "px";
+			} else {
+				contentContainer.style.maxHeight = "0";
+			}
+			isHidden = !isHidden;
+		});
+	</script>
 </body>
 </html>
