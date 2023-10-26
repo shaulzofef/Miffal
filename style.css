@@ -137,7 +137,8 @@ section {
 	display: inline-block;
 }
 .day-label {
-	padding-right: 0;	
+	padding-right: 0;
+	margin-right: 10px;	
 }
 .progress-label {
 	padding: 0 10px 0 0;
@@ -176,7 +177,9 @@ section {
 	margin-top: 2px;
 }
 .time {
-	width: 110px;
+	width: 105px;
+	text-align: right;
+	padding-right: 5px;
 	margin-top: 3px;
 }
 .details {
