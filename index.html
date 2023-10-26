@@ -209,52 +209,37 @@
 	</div>
 
 
-	<script>
-    	// Function to toggle between two icons
-    	function toggleIcon(event) {
-        	var iconElement = event.target;
-	
-        	if (iconElement.classList.contains("fa-plus")) {
-            	iconElement.classList.remove("fa-plus");
-            	iconElement.classList.add("fa-minus");
-        	} else {
-            	iconElement.classList.remove("fa-minus");
-            	iconElement.classList.add("fa-plus");
-        	}
-    	}
-	
-    	// Add a click event listener to all elements with the "iconToggle" class
-    	var iconElements = document.querySelectorAll(".iconToggle");
-    	iconElements.forEach(function (element) {
-        	element.addEventListener("click", toggleIcon);
-    	});
-				
-				
-		const toggleButtons = document.querySelectorAll('.toggle-button');
-		
-		toggleButtons.forEach(button => {
-	  	button.addEventListener('click', () => {
-			const targetId = button.getAttribute('data-target');
-			const contentContainer = document.getElementById(targetId);
-		
-			if (contentContainer) {
-		  	const isHidden = contentContainer.style.maxHeight === "0px" || contentContainer.style.maxHeight === "";
-		
-		  	if (isHidden) {
-				contentContainer.style.maxHeight = contentContainer.scrollHeight + "px";
-		  	} else {
-				contentContainer.style.maxHeight = "0";
-		  	}
-			}
-	  	});
-		
-	  	// Initialize content as hidden during page load
-	  	const targetId = button.getAttribute('data-target');
-	  	const contentContainer = document.getElementById(targetId);
-	  	if (contentContainer) {
-			contentContainer.style.maxHeight = "0";
-	  	}
-		});
-	</script>
+<script>
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const contentContainer = document.getElementById(targetId);
+            const iconElement = button.querySelector('.iconToggle');
+
+            if (contentContainer) {
+                const isHidden = contentContainer.style.maxHeight === "0px" || contentContainer.style.maxHeight === "";
+
+                if (isHidden) {
+                    contentContainer.style.maxHeight = contentContainer.scrollHeight + "px";
+                    iconElement.classList.remove("fa-plus");
+                    iconElement.classList.add("fa-minus");
+                } else {
+                    contentContainer.style.maxHeight = "0";
+                    iconElement.classList.remove("fa-minus");
+                    iconElement.classList.add("fa-plus");
+                }
+            }
+        });
+
+        // Initialize content as hidden during page load
+        const targetId = button.getAttribute('data-target');
+        const contentContainer = document.getElementById(targetId);
+        if (contentContainer) {
+            contentContainer.style.maxHeight = "0";
+        }
+    });
+</script>
 </body>
 </html>
