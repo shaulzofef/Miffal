@@ -1,4 +1,4 @@
-		const toggleButton = document.getElementById('toggleButton');
+const toggleButton = document.getElementById('toggleButton');
 const myDiv = document.getElementById('myDiv');
 let isHidden = true;
 

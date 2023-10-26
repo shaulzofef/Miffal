@@ -11,9 +11,9 @@
 }
 
 * {
-	color: var(--White);	
+	color: var(--White);
 }
-.orange, .blue, .green, .full, .submit{
+.orange, .blue, .green, .full, .submit, .fa-solid {
 	color: var(--Dark);		
 }
 .fa-house, .fa-rocket, .location > * {
@@ -22,7 +22,7 @@
 body {
 	background: var(--Dark);	
 }
-.day-label, .slot {
+.label, .slot {
 	background: var(--Light);
 }
 .orange {
@@ -34,15 +34,15 @@ body {
 .green, .submit {
 	background: var(--Highlight3);
 }
-.slots, .details {
+.day-content, .details {
 	background: var(--Mid);
 }
 .full {
 	opacity: 20%;	
 }
-
-
-
+a {
+	text-decoration: none;
+}
 
 /*-- Fonts --*/
 @font-face  {
@@ -57,6 +57,19 @@ body {
 	text-align: center;
 	font-family: 'MiraimLibre';
 	font-size: 1.1rem;
+	direction: rtl;
+}
+.green, .day-label *, .details *, .time  {
+	font-size: 1rem;
+}
+h2 {
+	position: relative;
+	display: inline-block;
+}
+.location i {
+	position: absolute;
+	right: -28px;
+	top: 3px;
 }
 h1 {
 	font-size: 1.3rem;
@@ -66,25 +79,23 @@ h2 {
 	font-weight: normal;
 	line-height: 2rem;
 }
-.time {
-	font-size: .9rem;
-}
 header {
-	direction: rtl;
 	margin-top: 50px;	
 }
 .time span {
 	font-size: .3rem;
 	vertical-align: top;
 }
-.details > *, form > *, label {
-	font-size: .9rem;
-	direction: rtl;
-	line-height: 1.6;
-}
-.details p {
+.details *  {
 	text-align: right;
 }
+.details > p {
+	line-height: 1.6;
+}
+.signed {
+	margin-left: 5px;
+}
+
 
 
 /*-- Alignment --*/
@@ -95,10 +106,12 @@ header {
 }
 .pill {
 	display: inline-block;
-	padding: 2px 9px 0;
+	padding: 2px 9px 1px 9px;
+	line-height: 25px;
+	text-align: center;
 }
 header, main {
-	max-width: 500px;
+	max-width: 600px;
 	min-width: 375px;
 	margin-left: auto;
 	margin-right: auto;	
@@ -110,64 +123,69 @@ body {
 section {
 	margin: 30px auto 0;
 }
-.day, .slots, .slot, .activity, .activities, .name, .day-label {
+.day, .day-content, .slot, .activity, .name, .label, .details {
 	display: flex;	
 	gap: 12px	 
 }
- .day-label, .slot, .activity, .name {
-	flex-direction: row-reverse;	
+.label, .activity, .name {
+	flex-direction: row;	
 }
-.day, .slots, .activities {
+.label {
+	display: inline-block;
+}
+.label > * {
+	display: inline-block;
+}
+.day-label {
+	padding-right: 0;	
+}
+.progress-label {
+	padding: 0 10px 0 0;
+}
+.day-label {
+	padding: 0 0 0 12px;
+}
+.signup {
+	margin-right: 5px;
+}
+.day, .day-content, .slot, .details {
 	 flex-direction: column;
 }
 .day {
-	align-items: flex-end;
+	align-items: flex-start;
 }
-.slots, .slot, .details, .pill {
+.day-content, .slot, .details, .pill {
 	border-radius: 15px;
-}
-.slots {
-	width: 100%;
 }
 .slot {
 	align-items: flex-start;
 	justify-content: space-between;
 	padding: 10px;
+	gap: 0;
 }
-.activities {
-	align-items: flex-end;
-	justify-content: flex-start;
-	flex: 1;
-}
-.activity {
-	justify-content: space-between;
-	width: 100%;
+.day-content, .activity, .name {
+	width: 100%;	
 }
 .name {
 	justify-content: flex-start;
 }
 .fa-rocket {
-	margin-top: 3px;
+	padding-top: 4px;
+}
+.fa-house {
+	margin-top: 2px;
 }
 .time {
-	width: 70px;
+	width: 110px;
 	margin-top: 3px;
 }
 .details {
-	padding: 10px;
-}
-form {
-	margin: 20px 0 10px;
-}
-select {
-	margin-right: 10px;
-}
-.form > input {
-	width: 200px;
-	height: 25px;
-	border-radius: 10px;
+	padding: 20px;
 	margin-top: 10px;
-	border: none;
+}
+.content-container {
+	transition: max-height 0.3s ease-in-out;
+	overflow: hidden;
 }
 
 /*-- Progress --*/
@@ -188,16 +206,15 @@ select {
 	background:  linear-gradient(to right, var(--Highlight2) 100%, var(--Highlight2-Dark) 0);	
 }
 
-
 /*-- Singup Arrow --*/
-.signup-position {
+.details-label-container {
 	position: relative;
 }
-.signup {
+.details-label {
 	position: absolute;
 	font-size: 1.2rem;
 	top: -50px;
-	right: -15px;
+	right: -75px;
 	color: var(--Highlight2);
 	font-family: 'Hand';
 }
@@ -207,14 +224,4 @@ select {
 	right: 103px;
 	transform: rotate(-110deg) scaleX(-1);
 	color: var(--Highlight2);
-}
-
-
-/*-- Details --*/
-.container {
-	overflow: hidden;
-}
-.content-container {
-	transition: max-height 0.3s ease-in-out;
-	max-height: 500px; /* Adjust this value based on your content */
 }
