@@ -117,8 +117,7 @@ header, main {
 	margin-right: auto;	
 }
 body {
-	padding-top: 20px;
-	padding-bottom: 50px;
+	padding: 20px 10px;
 }
 section {
 	margin: 30px auto 0;
@@ -138,7 +137,6 @@ section {
 }
 .day-label {
 	padding-right: 0;
-	margin-right: 10px;	
 }
 .progress-label {
 	padding: 0 10px 0 0;
