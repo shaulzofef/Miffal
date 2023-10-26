@@ -41,7 +41,7 @@
 							<div class="details-label-container">
 								<div class="details-label">פרטים&nbsp;והרשמה <i class="fa-solid fa-share"></i></div>
 							</div>
-							<div class="pill blue toggle-button" data-target="myDiv1">+</div>
+							<div class="pill blue toggle-button" data-target="myDiv1"><i class="iconToggle fa-solid fa-plus"></i></div>
 						</div>
 						<div class="details-container">
 							<div class="content-container hidden" id="myDiv1">
@@ -67,7 +67,7 @@
 								<i class="fa-solid fa-house"></i>
 								<div class="name">פרצה</div>
 							</div>
-							<div class="pill blue toggle-button" data-target="myDiv2">+</div>
+							<div class="pill blue toggle-button" data-target="myDiv2"><i class="iconToggle fa-solid fa-plus"></i></div>
 						</div>
 						<div class="details-container">
 							<div class="content-container hidden" id="myDiv2">
@@ -93,7 +93,7 @@
 								<i class="fa-solid fa-house"></i>
 								<div class="name">סדנת שירה</div>
 							</div>
-							<div class="pill blue toggle-button" data-target="myDiv3">+</div>
+							<div class="pill blue toggle-button" data-target="myDiv3"><i class="iconToggle fa-solid fa-plus"></i></div>
 						</div>
 						<div class="details-container">
 							<div class="content-container hidden" id="myDiv3">
@@ -128,7 +128,7 @@
 								<i class="fa-solid fa-rocket"></i>
 								<div class="name">טק קרייט</div>
 							</div>
-							<div class="pill blue toggle-button" data-target="myDiv4">+</div>
+							<div class="pill blue toggle-button" data-target="myDiv4"><i class="iconToggle fa-solid fa-plus"></i></div>
 						</div>
 						<div class="details-container">
 							<div class="content-container hidden" id="myDiv4">
@@ -154,7 +154,7 @@
 								<i class="fa-solid fa-house"></i>
 								<div class="name">מכונת משחק</div>
 							</div>
-							<div class="pill blue toggle-button" data-target="myDiv5">+</div>
+							<div class="pill blue toggle-button" data-target="myDiv5"><i class="iconToggle fa-solid fa-plus"></i></div>
 						</div>
 						<div class="details-container">
 							<div class="content-container hidden" id="myDiv5">
@@ -180,7 +180,7 @@
 								<i class="fa-solid fa-house"></i>
 								<div class="name">פרצה</div>
 							</div>
-							<div class="pill blue toggle-button" data-target="myDiv6">+</div>
+							<div class="pill blue toggle-button" data-target="myDiv6"><i class="iconToggle fa-solid fa-plus"></i></div>
 						</div>
 						<div class="details-container">
 							<div class="content-container hidden" id="myDiv6">
@@ -203,33 +203,31 @@
 			
 		</main>
 	
-		<footer>
-			Test <i style="color: #fff;" class="iconToggle fa-solid fa-plus"></i>
-	
+		<footer>	
 			<!--<p>&copy; 2023 Miffal</p>-->
 		</footer>
 	</div>
 
 
 	<script>
-    // Function to toggle between two icons
-    function toggleIcon(event) {
-        var iconElement = event.target;
-
-        if (iconElement.classList.contains("fa-plus")) {
-            iconElement.classList.remove("fa-plus");
-            iconElement.classList.add("fa-minus");
-        } else {
-            iconElement.classList.remove("fa-minus");
-            iconElement.classList.add("fa-plus");
-        }
-    }
-
-    // Add a click event listener to all elements with the "iconToggle" class
-    var iconElements = document.querySelectorAll(".iconToggle");
-    iconElements.forEach(function (element) {
-        element.addEventListener("click", toggleIcon);
-    });
+    	// Function to toggle between two icons
+    	function toggleIcon(event) {
+        	var iconElement = event.target;
+	
+        	if (iconElement.classList.contains("fa-plus")) {
+            	iconElement.classList.remove("fa-plus");
+            	iconElement.classList.add("fa-minus");
+        	} else {
+            	iconElement.classList.remove("fa-minus");
+            	iconElement.classList.add("fa-plus");
+        	}
+    	}
+	
+    	// Add a click event listener to all elements with the "iconToggle" class
+    	var iconElements = document.querySelectorAll(".iconToggle");
+    	iconElements.forEach(function (element) {
+        	element.addEventListener("click", toggleIcon);
+    	});
 				
 				
 		const toggleButtons = document.querySelectorAll('.toggle-button');

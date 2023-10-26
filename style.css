@@ -171,6 +171,9 @@ section {
 .fa-house {
 	margin-top: 2px;
 }
+.fa-plus, .fa-minus {
+	font-size: 15px;
+}
 .time {
 	width: 110px;
 	text-align: right;
