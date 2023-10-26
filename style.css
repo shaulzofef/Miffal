@@ -116,7 +116,7 @@ header, main {
 	margin-left: auto;
 	margin-right: auto;	
 }
-body {
+#wrapper {
 	padding: 20px 10px;
 }
 section {
