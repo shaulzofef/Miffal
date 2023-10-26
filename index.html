@@ -208,7 +208,29 @@
 		</footer>
 	</div>
 
+<i class="iconToggle fa-solid fa-plus"></i>
 	<script>
+	
+    // Function to toggle between two icons
+    function toggleIcon(event) {
+        var iconElement = event.target;
+
+        if (iconElement.classList.contains("fa-plus")) {
+            iconElement.classList.remove("fa-plus");
+            iconElement.classList.add("fa-minus");
+        } else {
+            iconElement.classList.remove("fa-minus");
+            iconElement.classList.add("fa-plus");
+        }
+    }
+
+    // Add a click event listener to all elements with the "iconToggle" class
+    var iconElements = document.querySelectorAll(".iconToggle");
+    iconElements.forEach(function (element) {
+        element.addEventListener("click", toggleIcon);
+    });
+				
+				
 		const toggleButtons = document.querySelectorAll('.toggle-button');
 		
 		toggleButtons.forEach(button => {
