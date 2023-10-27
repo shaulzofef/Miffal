@@ -50,7 +50,7 @@
 									<div>
 										<div class="label pill progress-label">
 											<div class="signed">רשומים</div>
-											<div class="pill progress progress75">15/20</div>
+											<div class="pill progress" data-ratio="1/5"></div>
 										</div>
 										<a href="" class="pill green signup">להרשמה <i class="fa-solid fa-arrow-left"></i></a>
 									</div>
@@ -210,6 +210,18 @@
 
 
 <script>
+				const progressBars = document.querySelectorAll(".progress");
+				
+				progressBars.forEach(bar => {
+				  const ratio = bar.getAttribute("data-ratio").split("/");
+				  const percentage = (ratio[0] / ratio[1]) * 100;
+				  bar.style.width = percentage + "%";
+				  if (percentage === 100) {
+				    bar.classList.add("filled");
+				  }
+				});
+				
+				
     const toggleButtons = document.querySelectorAll('.toggle-button');
 
     toggleButtons.forEach(button => {
