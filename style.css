@@ -192,8 +192,12 @@ section {
 /*-- Progress --*/
 .progress {
 	width: 50px;
-	color: #2f3439;	
+	color: var(--Dark);	
+	backgroung: var(--highlight2-Dark);
 }
+.filled {
+	background: var(--higlight2);
+	}
 .progress25 {
 	background:  linear-gradient(to right, var(--Highlight2) 25%, var(--Highlight2-Dark) 0);	
 }
