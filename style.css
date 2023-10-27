@@ -193,10 +193,10 @@ section {
 .progress {
 	width: 50px;
 	color: var(--Dark);	
-	backgroung: var(--highlight2-Dark);
+	backgroung-color: var(--highlight2);
 }
 .filled {
-	background: var(--highlight2);
+	background: var(--highlight2-Dark);
 	}
 .progress25 {
 	background:  linear-gradient(to right, var(--Highlight2) 25%, var(--Highlight2-Dark) 0);	
