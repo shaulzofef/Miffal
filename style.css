@@ -196,7 +196,7 @@ section {
 	backgroung: var(--highlight2-Dark);
 }
 .filled {
-	background: var(--higlight2);
+	background: var(--highlight2);
 	}
 .progress25 {
 	background:  linear-gradient(to right, var(--Highlight2) 25%, var(--Highlight2-Dark) 0);	
