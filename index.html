@@ -210,16 +210,6 @@
 </body>
 
 <script>
-				const progressBars = document.querySelectorAll(".progress");
-				
-				progressBars.forEach(bar => {
-				  const ratio = bar.getAttribute("data-ratio").split("/");
-				  const percentage = (ratio[0] / ratio[1]) * 100;
-				  bar.style.width = percentage + "%";
-				  if (percentage === 100) {
-				    bar.classList.add("filled");
-				  }
-				});
 				
 				
     const toggleButtons = document.querySelectorAll('.toggle-button');
